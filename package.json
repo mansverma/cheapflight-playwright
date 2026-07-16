@@ -3,7 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "playwright test --project=chromium --project=api",
+    "test:ui": "playwright test --project=chromium",
+    "test:api": "playwright test --project=api",
+    "test:search": "playwright test tests/searchFlight.spec.js --project=chromium",
+    "test:home": "playwright test tests/homePage.spec.js --project=chromium",
+    "test:booking": "playwright test tests/apiTests.spec.js --project=api",
+    "test:headed": "playwright test --project=chromium --headed",
+    "report": "playwright show-report"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
