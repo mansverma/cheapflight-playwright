@@ -45,7 +45,7 @@ export default defineConfig({
     },
     {
       name: "chromium",
-      testIgnore: "**/apiTests.spec.js",
+      testIgnore: ["**/apiTests.spec.js", "**/mobile*.spec.js"],
       use: {
         ...devices["Desktop Chrome"],
         launchOptions: {
@@ -55,12 +55,12 @@ export default defineConfig({
     },
     {
       name: "Mobile Chrome",
-      testIgnore: "**/apiTests.spec.js",
+      testIgnore: ["**/apiTests.spec.js", "**/searchFlight.spec.js"],
       use: { ...devices["Pixel 5"] },
     },
     {
       name: "Mobile Safari",
-      testIgnore: "**/apiTests.spec.js",
+      testIgnore: ["**/apiTests.spec.js", "**/searchFlight.spec.js"],
       use: { ...devices["iPhone 12"] },
     },
 
